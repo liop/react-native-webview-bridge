@@ -14,12 +14,22 @@
 
 #import <UIKit/UIKit.h>
 
+#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTAutoInsetsProtocol.h>
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTLog.h>
 #import <React/RCTUtils.h>
 #import <React/RCTView.h>
+#else
+#import "RCTAutoInsetsProtocol.h"
+#import "RCTConvert.h"
+#import "RCTEventDispatcher.h"
+#import "RCTLog.h"
+#import "RCTUtils.h"
+#import "RCTView.h"
+#endif
+
 #import "UIView+React.h"
 #import <objc/runtime.h>
 
